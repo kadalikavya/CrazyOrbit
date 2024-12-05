@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>About Us Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crazy Orbit with Tailwind CSS</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="icon" type="image/x-icon" href="Images/main-logo.webp">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      
+<style>
+
+body {
+      overflow-x: hidden;
+    }
+ .head-scroll {
+      background:  #6100eb;
+      -webkit-background-clip: text;
+     
+      -webkit-text-stroke: 1px transparent;
+      color: #050505;
+    }
+
+</style>
+</head>
+<body>
+<!----------------------------Header Section----------------------------------->
+<header class="sticky top-0 z-10 bg-[#1a3352]">
+        <nav class="flex flex-row items-center justify-between pt-5 py-2 px-6">
+          <div class="flex flex-row gap-6">
+            <img src="/Images/main-logo.webp" class="w-[109.08px] h-[48.5px]" alt="Logo" />
+          </div>
+          <div class="md:hidden mt-2">
+            <button onclick="toggleMenu('nav-mobile')">
+              <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+          </div>
+          <div id="nav-desktop" class="hidden md:flex flex-row space-x-9 text-gray-700 md:mr-6 mt-1">
+            <ul class="flex flex-row space-x-8 pt-1 text-gray-700">
+              <li><a href="#" class="text-[#FE0078] font-[300]">Home</a></li>
+              <li><a href="AboutUs.html" class="text-white hover:text-[#FE0078] font-[300]">About Us</a></li>
+              <li class="relative">
+                <button onclick="toggleMenu('services-desktop')" class="text-white hover:text-[#FE0078] font-[300] flex items-center">
+                  Services
+                  <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div id="services-desktop" class="hidden absolute bg-black text-white mt-1 shadow-lg rounded-md w-[300px]">
+                  <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Digital Marketing</a>
+                  <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Graphical Designing</a>
+                  <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Wordpress Development</a>
+                  <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Web Development</a>
+                  <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Custom Ecommerce Designs</a>
+                  <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Mobile and Responsive Design</a>
+                  <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Search Engine Optimization</a>
+                </div>
+              </li>
+              <li><a href="#" class="hover:text-[#FE0078] font-[300] text-white">Careers</a></li>
+              <li><a href="#contact" class="hover:text-[#FE0078] font-[300] text-white">Our Projects</a></li>
+            </ul>
+            <button class="w-[133px] h-[40px] text-white bg-[#FE0078]">Work With Us</button>
+          </div>
+        </nav>
+        <div id="nav-mobile" class="hidden bg-[#1a3352] md:hidden">
+          <ul class="flex flex-col space-y-4 text-gray-700 p-6">
+            <li><a href="#" class="text-[#FE0078] font-[300]">Home</a></li>
+            <li><a href="#" class="text-white hover:text-[#FE0078] font-[300]">About Us</a></li>
+            <li class="relative">
+              <button onclick="toggleMenu('services-mobile')" class="text-white hover:text-[#FE0078] font-[300] flex items-center">
+                Services
+                <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div id="services-mobile" class="hidden absolute bg-black text-white mt-1 shadow-lg rounded-md w-[300px]">
+                <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Digital Marketing</a>
+                <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Graphical Designing</a>
+                <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Wordpress Development</a>
+                <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Web Development</a>
+                <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Custom Ecommerce Designs</a>
+                <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Mobile and Responsive Design</a>
+                <a href="#" class="block px-4 py-2 hover:text-[#FE0078]">Search Engine Optimization</a>
+              </div>
+            </li>
+            <li><a href="#" class="text-white hover:text-[#FE0078] font-[300]">Careers</a></li>
+            <li><a href="#contact" class="text-white hover:text-[#FE0078] font-[300]">Our Projects</a></li>
+          </ul>
+        </div>
+</header>
+      
+
+
+
+<main class="bg-black">
+    <!----------------------------Section1 Section----------------------------------->
+<section class=" p-2">
+<div class="flex flex-col justify-center  items-center md:text-center">
+    <div class=" flex-col md:p-9">
+        <h1 class="text-5xl text-white  p-5 font-[100] line-clamp-2 ">About <span class="text-[#FE0078]">  CrazyOrbit</span></h1>
+        <p class="text-3xl text-white font-[200] line-clamp-2 ml-6   md:text-xl md:ml-0">Focused, tailored, profit-oriented web design solutions.</p>
+    </div>
+    <img src="Images/About_images/section_one_group.svg" class="w-[90%] my-6 mx-2"/>
+    <div class=" flex flex-col justify-center items-center md:m-12  lg:px-[180px] ">
+        <p class="text-white text-xs p-5 font-[100] md:text-sm" ><span class="text-[#FE0078] text-[18px]">CrazyOrbit </span> is a global integrated communications and marketing company that helps businesses take their online presence to the next level. Our team of experienced professionals is committed to helping our clients reach their goals and maximize their ROI.We offer a wide range of services, such as website design, SEO, social media marketing, content marketing, and more. Our passion is to help our clients succeed, and we strive to provide the highest quality service possible. With our expertise, your business will be able to reach its target audience and make a lasting impression.</p>
+    </div> 
+</div>
+</section>
+
+
+    <!----------------------------Section2 Section----------------------------------->
+<section class=" p-2">
+<div>
+    <div class="flex flex-col justify-center items-center lg:m-9 ">
+        <div class="relative group mb-3 md:mb-0 md:flex justify-center items-center w-fit group ">
+          <h2 class="head-scroll text-[55px] md:text-[90px] lg:text-[125px]">OUR PROCESS</h2>
+         
+         </div>
+         <p class="text-white text-4xl  lg:text-6xl font-[200] absolute mt-4  md:mt-8">Our Process</p>
+        </div>
+         <div class="grid grid-cols-4 m-6 gap-4 lg:gap-3">
+            <div class="col-span-4 md:col-span-2 lg:col-span-1 ">
+
+            <div class="relative rounded-2xl "><img src="Images/About_images/section2_card_bg.svg" class=""/>
+                    <div class="absolute inset-0 m-3 flex items-center grid grid-cols-5">
+                        <p class="text-[#9747FE] text-xl col-span-1 m-1">01.</p>
+                        <div class="col-span-4 flex-col">
+                            <p class="text-white text-2xl font-semi-bold">Research</p>
+                            <p class="text-white text-sm pt-2">Project Goals / The Audience / 
+                                Industry</p>
+                        </div>
+                    </div>
+                    
+            </div>
+            </div>
+            <div class="col-span-4 md:col-span-2 lg:col-span-1">
+                <div class="relative rounded-2xl "><img src="Images/About_images/section2_card_bg.svg" class=""/>
+                    <div class="absolute inset-0 m-3 flex items-center grid grid-cols-5">
+                        <p class="text-[#9747FE] text-xl col-span-1 m-1">02.</p>
+                        <div class="col-span-4 flex-col">
+                            <p class="text-white text-2xl font-semi-bold">Prototyping</p>
+                            <p class="text-white text-sm pt-2">Project Architecture / User Flow / 
+                                Copywriting</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-span-4 md:col-span-2 lg:col-span-1">
+                <div class="relative rounded-2xl "><img src="Images/About_images/section2_card_bg.svg" class=""/>
+                    <div class="absolute inset-0 m-3 flex items-center grid grid-cols-5">
+                        <p class="text-[#9747FE] text-xl col-span-1 m-1">03.</p>
+                        <div class="col-span-4 flex-col">
+                            <p class="text-white text-2xl font-semi-bold">Design</p>
+                            <p class="text-white text-sm pt-2">Design Concept / Idea / 
+                                Layout</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-span-4 md:col-span-2 lg:col-span-1">
+                <div class="relative rounded-2xl "><img src="Images/About_images/section2_card_bg.svg" class=""/>
+                    <div class="absolute inset-0 m-3 flex items-center grid grid-cols-5">
+                        <p class="text-[#9747FE] text-xl col-span-1 m-1">04.</p>
+                        <div class="col-span-4 flex-col">
+                            <p class="text-white text-2xl font-semi-bold">Development</p>
+                            <p class="text-white text-sm pt-2 ">Tune Up / Technical Implementation / 
+                                Guidebook / UI Kit</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+         </div>
+           
+          
+      </div>
+</div>
+</section>
+
+    <!----------------------------Section3 Section----------------------------------->
+<section>
+<div class="p-2 m-6">
+    <div class="grid grid-cols-2">
+        <div class="col-span-2 md:col-span-1">
+            <div class="flex flex-col ">
+                    <h1 class="mb-4 text-white text-2xl md:text-4xl font-extralight">LET’S TAKE YOUR
+                        BUSINESS  TO THE <span class="font-bold text-4xl">NEXT</span>
+                        LEVEL </h1>
+                        
+                   <div class="md:flex flex-row justify-center items-center">
+                    <div class="bg-[#FE0078] h-[150px] w-[150px]   ml-2 md:flex rounded-full">
+                        <div class="flex flex-col justify-center items-center p-2 m-6">
+                            <p class="text-white text-2xl ml-2 mb-1">Start
+                                Project</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none" class=" mt-1">
+                                <path d="M24.7132 1.99969C24.7132 1.17126 24.0416 0.499687 23.2132 0.499687L9.7132 0.499686C8.88478 0.499686 8.2132 1.17126 8.2132 1.99969C8.2132 2.82811 8.88478 3.49969 9.7132 3.49969H21.7132V15.4997C21.7132 16.3281 22.3848 16.9997 23.2132 16.9997C24.0416 16.9997 24.7132 16.3281 24.7132 15.4997L24.7132 1.99969ZM3.06066 24.2736L24.2739 3.06035L22.1525 0.939026L0.93934 22.1522L3.06066 24.2736Z" fill="white"/>
+                              </svg>
+                        </div>
+                         </div>
+                   </div>
+                 </div>
+            </div>
+        <div class="hidden md:block md:col-span-1">
+            <div class="flex justify-center relative">
+                <img src="Images/About_images/Button.svg"/>
+                <div class="absolute mt-5 ml-12 pl-9">
+                    <img src="Images/About_images/Handpointer.svg" class=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+     <!----------------------------Section4 Section----------------------------------->
+<section class="p-2 ">
+<div>
+    <!---------------------------------------------Uppper Section---------------------------------->
+<div class="grid grid-cols-2 m-6">
+<div class="col-span-2 md:col-span-1">
+<p class="text-white font-[100] font-normal text-2xl">Get To Know Us</p>
+</div>
+<div class="col-span-2 md:col-span-1">
+<p class="text-white font-extralight text-md mt-4 md:mt-2">We are a UX/UI company driven by a passion for creating the best possible digital experiences. We have gathered a team of highly talented individuals to help us design the world we want to live in. Our mission is to develop user interfaces and experiences that are intuitive, efficient, and beautiful. We strive to make the digital world a better place, one product at a time.</p>
+</div>
+</div>
+
+<!---------------------------------------------Gallery section-------------------------------------->
+
+
+<div class="m-6">
+<div class="grid grid-cols-2">
+    <!----------left grid in large devices and upper div in the small& medium devices---------->
+    <div class="col-span-2 lg:col-span-1">
+        <div class="grid grid-cols-12 gap-2">
+            <div class="col-span-8">
+                <div class="flex flex-col">
+                    <div class="">
+                        <img src="Images/About_images/Gallery_1.png"/>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2 mt-4 p-1"> 
+                        <div class="col-span-1 ">
+                            <div class="bg-[#1b4986] h-[80px] lg:h-[90px] text-xs p-2 rounded-2xl text-white text-center flex justify-center items-center">
+                                Your website should be making your business money
+                            </div>
+                        </div>
+                        <div class="col-span-1 ">
+                            <div class="bg-[#870c41] h-[80px] text-xs p-2 rounded-2xl text-white text-center flex justify-center items-center">
+                                If it
+                                Doesn’t, 
+                               we Can Help.
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                
+               
+            </div>
+
+            <div class="col-span-4"><img src="Images/About_images/Gallery_2_robo.png"/></div>
+        </div>
+    </div>
+
+
+     <!--------- Right grid in large devices and lower div in the small & medium devices---------->
+
+    <div class="col-span-2 lg:col-span-1 mt-9 md:mt-0">
+        <div class="grid grid-cols-3 gap-2">
+            <div class="col-span-1 flex flex-col ">
+                <div class="bg-[#056769] rounded-2xl text-white p-5 text-xs mb-2 pb-4">Your website should be making your business money</div>
+                <div class=""><img src="Images/About_images/Gallery_4.png"/></div>
+            </div>
+
+            <div class="col-span-1 "><img src="Images/About_images/Gallery_3_Lady.png"/></div>
+
+            <div class="col-span-1  flex flex-col">
+                <div class="bg-[#4f00bd] rounded-xl text-white text-xs p-5 mb-4">New ideas move
+                    the world</div>
+                <div class="bg-[#cc0061] rounded-xl text-white text-xs p-5">we are
+                    dependable
+                    because we hold
+                    ourselves
+                    accountable</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+</div>
+</section>
+
+
+<section5>
+
+</section5>
+
+
+<section6>
+
+</section6>
+
+
+<section7>
+
+</section7>
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+</footer>
+
+<script>
+    function toggleMenu(id) {
+      const menu = document.getElementById(id);
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+
+
+
+</html>
